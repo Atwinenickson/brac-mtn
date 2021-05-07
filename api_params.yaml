@@ -1,0 +1,26 @@
+environments:
+  - name: nita-dev
+    endpoints:
+      production:
+          url: "http://ei.dev.bracbank.local/mtn-push-pull-api/v1"
+          config:
+          retryTimeOut: $RETRY
+      sandbox:
+          url: "http://ei.dev.bracbank.local/mtn-push-pull-api/v1"
+          config:
+          retryTimeOut: $RETRY
+  - name: nita-host
+    endpoints:
+      production:
+          url: 'http://ei.dev.bracbank.local/mtn-push-pull-api/v1'
+          config:
+          retryTimeOut: $RETRY
+      sandbox:
+          url: 'http://ei.dev.bracbank.local/mtn-push-pull-api/v1'
+          config:
+          retryTimeOut: $RETRY
+
+deploy:
+  import:
+    update: true
+    preserveProvider: true
